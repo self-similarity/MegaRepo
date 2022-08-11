@@ -1,0 +1,17 @@
+[
+    {
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/self-similarity/MegaRepo",
+        "fileSize": 6948,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            
+        ],
+        "version": 1,
+        "internalName": "MegaProvider",
+        "description": "This plugin adds all repositories each time the app is opened. Uninstall after one run if you do not want all repositories. Does not automatically refresh the repository list.",
+        "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/MegaProvider.cs3",
+        "name": "MegaProvider"
+    }
+]
