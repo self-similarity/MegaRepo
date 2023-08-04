@@ -44,6 +44,7 @@ class MegaPlugin : Plugin() {
         val text =
             app.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json").text
 
+        // To parse both objects and strings
         val tree = ObjectMapper().readTree(text)
 
         return tree.mapNotNull {
