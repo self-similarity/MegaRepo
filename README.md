@@ -1,27 +1,6 @@
-**⚠️ This is currently under development, dont use it yet if you're not comfortable with constantly merging new changes**
+### One repository to rule them all
+Add all other repositories at once. Add this repository using this shortcode: [megarepo](https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/repo.json)
 
-# `Cloudstream3 Plugin Repo Template`
+~Click~ Pet the gorilla to install it on your phone:
 
-Template for a [Cloudstream3](https://github.com/recloudstream) plugin repo
-
-**⚠️ Make sure you check "Include all branches" when using this template**
-
- 
-## Getting started with writing your first plugin
-
-This template includes 1 example plugin.
-
-1. Open the root build.gradle.kts, read the comments and replace all the placeholders
-2. Familiarize yourself with the project structure. Most files are commented
-3. Build or deploy your first plugin using:
-   - Windows: `.\gradlew.bat ExampleProvider:make` or `.\gradlew.bat ExampleProvider:deployWithAdb`
-   - Linux & Mac: `./gradlew ExampleProvider:make` or `./gradlew ExampleProvider:deployWithAdb`
-
-## License
-
-Everything in this repo is released into the public domain. You may use it however you want with no conditions whatsoever
-
-## Attribution
-
-This template as well as the gradle plugin and the whole plugin system is **heavily** based on [Aliucord](https://github.com/Aliucord).
-*Go use it, it's a great mobile discord client mod!*
+[<img alt="alt_text" width="100px" src="https://discord.com/assets/e8b3b5a31c0a3c541960bd3ddccc538f.svg" />](cloudstreamrepo://raw.githubusercontent.com/self-similarity/MegaRepo/builds/repo.json)
