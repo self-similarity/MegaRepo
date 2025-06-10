@@ -1,8 +1,8 @@
 {
-    "name": "Mega repository",
-    "description": "Add all repositories easily.",
+    "name": "Vega repository",
+    "description": "Tüm tr depoları.",
     "manifestVersion": 1,
     "pluginLists": [
-      "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/plugins.json"
+      "https://raw.githubusercontent.com/WantedGang/VegaRepo/builds/plugins.json"
     ]
 }
