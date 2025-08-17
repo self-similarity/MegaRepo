@@ -1,5 +1,5 @@
 // use an integer for version numbers
-version = 1
+version = 2
 
 cloudstream {
     description = "This plugin adds all repositories each time the app is opened. " +
