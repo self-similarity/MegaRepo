@@ -30,7 +30,8 @@ class MegaPlugin : Plugin() {
 
             val repo = RepositoryManager.parseRepository(url)
             val name = repo?.name ?: "No name"
-            val data = RepositoryData(name, url)
+            val iconUrl = repo?.iconUrl
+            val data = RepositoryData(iconUrl,name, url)
             RepositoryManager.addRepository(data)
         }
     }
