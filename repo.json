@@ -3,6 +3,6 @@
     "description": "Add all repositories easily.",
     "manifestVersion": 1,
     "pluginLists": [
-      "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/plugins.json"
+      "https://raw.githubusercontent.com/Akhlak-Pro/MYMegaRepo/builds/plugins.json"
     ]
 }
