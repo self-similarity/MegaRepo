@@ -1,19 +1,21 @@
-import com.lagradost.cloudstream3.gradle.CloudstreamExtension 
 import com.android.build.gradle.BaseExtension
+import com.lagradost.cloudstream3.gradle.CloudstreamExtension
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 buildscript {
     repositories {
         google()
         mavenCentral()
-        // Shitpack repo which contains our tools and dependencies 
+        // Shitpack repo which contains our tools and dependencies
         maven("https://jitpack.io")
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath("com.android.tools.build:gradle:8.7.3")
         // Cloudstream gradle plugin which makes everything work and builds plugins
         classpath("com.github.recloudstream:gradle:master-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
     }
 }
 
@@ -40,11 +42,12 @@ subprojects {
     }
 
     android {
-        compileSdkVersion(30)
+        namespace = "com.exammegaple"
 
         defaultConfig {
             minSdk = 21
-            targetSdk = 30
+            targetSdk = 35
+            compileSdkVersion(35)
         }
 
         compileOptions {
@@ -52,14 +55,14 @@ subprojects {
             targetCompatibility = JavaVersion.VERSION_1_8
         }
 
-        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-            kotlinOptions {
-                jvmTarget = "1.8" // Required
-                // Disables some unnecessary features
-                freeCompilerArgs = freeCompilerArgs +
-                        "-Xno-call-assertions" +
-                        "-Xno-param-assertions" +
-                        "-Xno-receiver-assertions"
+        tasks.withType<KotlinJvmCompile> {
+            compilerOptions {
+                jvmTarget.set(JvmTarget.JVM_1_8) // Required
+                freeCompilerArgs.addAll(
+                    "-Xno-call-assertions",
+                    "-Xno-param-assertions",
+                    "-Xno-receiver-assertions"
+                )
             }
         }
     }
@@ -75,10 +78,10 @@ subprojects {
         // but you dont need to include any of them if you dont need them
         // https://github.com/recloudstream/cloudstream/blob/master/app/build.gradle
         implementation(kotlin("stdlib")) // adds standard kotlin features, like listOf, mapOf etc
-        implementation("com.github.Blatzar:NiceHttp:0.4.2") // http library
+        implementation("com.github.Blatzar:NiceHttp:0.4.11") // http library
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-        implementation("org.jsoup:jsoup:1.13.1") // html parser
+        implementation("org.jsoup:jsoup:1.18.3") // html parser
     }
 }
 
