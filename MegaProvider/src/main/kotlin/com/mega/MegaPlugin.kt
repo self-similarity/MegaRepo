@@ -34,7 +34,7 @@ class MegaPlugin : Plugin() {
                 val iconUrl = repo?.iconUrl
                 val data = RepositoryData(iconUrl, name, url)
                 RepositoryManager.addRepository(data)
-            } catch (_: Exception) {
+            } catch (_: Throwable) {
                 val data = RepositoryData(name, url)
                 RepositoryManager.addRepository(data)
             }
